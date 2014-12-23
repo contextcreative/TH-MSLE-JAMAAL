@@ -1,0 +1,464 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*  SECTIONS  ============================================================================= */
+/* line 4, ../sass/_columns.scss */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+/* line 13, ../sass/_columns.scss */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+/* line 18, ../sass/_columns.scss */
+.group:after {
+  clear: both;
+}
+
+/* line 21, ../sass/_columns.scss */
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+/* line 27, ../sass/_columns.scss */
+.col {
+  display: block;
+  float: left;
+  margin: 1% 0 1% 1.6%;
+}
+
+/* line 33, ../sass/_columns.scss */
+.col:first-child {
+  margin-left: 0;
+}
+
+/* all browsers except IE6 and lower */
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 600 PIXELS */
+@media only screen and (max-width: 600px) {
+  /* line 39, ../sass/_columns.scss */
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+/*  GRID OF TWELVE   ============================================================================= */
+/* line 46, ../sass/_columns.scss */
+.span_12_of_12 {
+  width: 100%;
+}
+
+/* line 50, ../sass/_columns.scss */
+.span_11_of_12 {
+  width: 91.53%;
+}
+
+/* line 54, ../sass/_columns.scss */
+.span_10_of_12 {
+  width: 83.06%;
+}
+
+/* line 58, ../sass/_columns.scss */
+.span_9_of_12 {
+  width: 74.6%;
+}
+
+/* line 62, ../sass/_columns.scss */
+.span_8_of_12 {
+  width: 66.13%;
+}
+
+/* line 66, ../sass/_columns.scss */
+.span_7_of_12 {
+  width: 57.66%;
+}
+
+/* line 70, ../sass/_columns.scss */
+.span_6_of_12 {
+  width: 49.2%;
+}
+
+/* line 74, ../sass/_columns.scss */
+.span_5_of_12 {
+  width: 40.73%;
+}
+
+/* line 78, ../sass/_columns.scss */
+.span_4_of_12 {
+  width: 32.26%;
+}
+
+/* line 82, ../sass/_columns.scss */
+.span_3_of_12 {
+  width: 23.8%;
+}
+
+/* line 86, ../sass/_columns.scss */
+.span_2_of_12 {
+  width: 15.33%;
+}
+
+/* line 90, ../sass/_columns.scss */
+.span_1_of_12 {
+  width: 6.86%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 600 PIXELS */
+@media only screen and (max-width: 600px) {
+  /* line 98, ../sass/_columns.scss */
+  .span_12_of_12 {
+    width: 100%;
+  }
+
+  /* line 101, ../sass/_columns.scss */
+  .span_11_of_12 {
+    width: 100%;
+  }
+
+  /* line 104, ../sass/_columns.scss */
+  .span_10_of_12 {
+    width: 100%;
+  }
+
+  /* line 107, ../sass/_columns.scss */
+  .span_9_of_12 {
+    width: 100%;
+  }
+
+  /* line 110, ../sass/_columns.scss */
+  .span_8_of_12 {
+    width: 100%;
+  }
+
+  /* line 113, ../sass/_columns.scss */
+  .span_7_of_12 {
+    width: 100%;
+  }
+
+  /* line 116, ../sass/_columns.scss */
+  .span_6_of_12 {
+    width: 100%;
+  }
+
+  /* line 119, ../sass/_columns.scss */
+  .span_5_of_12 {
+    width: 100%;
+  }
+
+  /* line 122, ../sass/_columns.scss */
+  .span_4_of_12 {
+    width: 100%;
+  }
+
+  /* line 125, ../sass/_columns.scss */
+  .span_3_of_12 {
+    width: 100%;
+  }
+
+  /* line 128, ../sass/_columns.scss */
+  .span_2_of_12 {
+    width: 100%;
+  }
+
+  /* line 131, ../sass/_columns.scss */
+  .span_1_of_12 {
+    width: 100%;
+  }
+}
+/* line 19, ../sass/_typography.scss */
+body {
+  font: normal normal normal 112.5%/1.25em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #7d7d7d;
+}
+
+/* line 24, ../sass/_typography.scss */
+p, blockquote, pre {
+  margin: 0 0 0.61111em 0;
+}
+
+/* line 28, ../sass/_typography.scss */
+ul {
+  padding: 0 0 0 1em;
+  margin: 0 0 0.61111em 0;
+}
+
+/* line 33, ../sass/_typography.scss */
+a:link, a:visited {
+  color: #00703c;
+}
+
+/* line 41, ../sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.61111em 0;
+}
+
+/* line 45, ../sass/_typography.scss */
+h1 {
+  font: normal normal bold 27px/28px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #8dc63f;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+/* line 53, ../sass/_typography.scss */
+.intro-h1 {
+  font: normal normal normal 18px/12px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #8dc63f;
+  text-transform: uppercase;
+}
+
+/* line 59, ../sass/_typography.scss */
+h2 {
+  font: normal normal normal 0.72727em/0.72727em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #8dc63f;
+  text-transform: uppercase;
+}
+
+/* line 69, ../sass/_typography.scss */
+#intro-text {
+  color: #ffffff;
+  font: normal 24px/29px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 350px) {
+  /* line 81, ../sass/_typography.scss */
+  body {
+    font: normal 14px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  }
+
+  /* line 85, ../sass/_typography.scss */
+  #intro-text {
+    font: normal 20px/25px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+    margin-bottom: 10px;
+  }
+
+  /* line 90, ../sass/_typography.scss */
+  h1 {
+    font: normal normal bold 23px/24px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  }
+
+  /* line 95, ../sass/_typography.scss */
+  .intro-h1 {
+    font: normal normal normal 14px/8px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  }
+
+  /* line 99, ../sass/_typography.scss */
+  h2 {
+    font: normal normal normal 0.66667em/0.66667em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  }
+}
+/* line 45, ../sass/_base.scss */
+img {
+  display: inline-block;
+  border: 0px;
+}
+
+/* line 8, ../sass/screen.scss */
+body {
+  background-color: #ffffff;
+}
+
+/* line 12, ../sass/screen.scss */
+#pagewrap {
+  max-width: 1000px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+/* line 18, ../sass/screen.scss */
+header.header {
+  width: 100%;
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 850px) {
+  /* line 18, ../sass/screen.scss */
+  header.header {
+    margin-bottom: 15px;
+  }
+}
+/* line 27, ../sass/screen.scss */
+header.header .mobile {
+  display: block;
+}
+/* line 28, ../sass/screen.scss */
+header.header .desktop {
+  display: none;
+}
+@media screen and (min-width: 850px) {
+  /* line 31, ../sass/screen.scss */
+  header.header .mobile {
+    display: none;
+  }
+  /* line 32, ../sass/screen.scss */
+  header.header .desktop {
+    display: block;
+  }
+}
+/* line 36, ../sass/screen.scss */
+header.header nav {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #7d7d7d;
+}
+/* line 41, ../sass/screen.scss */
+header.header nav ul {
+  width: 95%;
+  padding: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 5%;
+}
+/* line 47, ../sass/screen.scss */
+header.header nav ul li {
+  display: inline-block;
+}
+/* line 50, ../sass/screen.scss */
+header.header nav ul li:first-child {
+  padding-right: 20px;
+}
+/* line 55, ../sass/screen.scss */
+header.header nav a:link, header.header nav a:visited {
+  color: #7d7d7d;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 62, ../sass/screen.scss */
+header.header nav a:hover {
+  color: #8dc63f;
+}
+/* line 66, ../sass/screen.scss */
+header.header nav .mobilenav {
+  background-color: #00703c;
+  margin-bottom: 0px;
+}
+/* line 69, ../sass/screen.scss */
+header.header nav .mobilenav ul li a {
+  color: #ffffff;
+}
+/* line 72, ../sass/screen.scss */
+header.header nav img.logos {
+  margin: 0 auto;
+  max-width: 45%;
+}
+/* line 77, ../sass/screen.scss */
+header.header nav div.section, header.header nav div.col {
+  position: relative;
+  height: 50px;
+}
+/* line 82, ../sass/screen.scss */
+header.header nav .section.logos, header.header nav .logos .col {
+  height: 110px;
+}
+/* line 86, ../sass/screen.scss */
+header.header nav #THlogo {
+  float: left;
+  position: absolute;
+  bottom: 0px;
+  left: 4%;
+}
+/* line 88, ../sass/screen.scss */
+header.header nav #SoElogo {
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  right: 4%;
+}
+@media screen and (min-width: 850px) {
+  /* line 91, ../sass/screen.scss */
+  header.header nav #THlogo, header.header nav #SoElogo {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  /* line 97, ../sass/screen.scss */
+  header.header nav div.section, header.header nav div.col {
+    height: 125px;
+  }
+  /* line 101, ../sass/screen.scss */
+  header.header nav ul {
+    left: 0;
+  }
+}
+
+/* line 108, ../sass/screen.scss */
+#intro-banner {
+  background-color: #000000;
+  position: relative;
+}
+/* line 112, ../sass/screen.scss */
+#intro-banner #title-mark {
+  max-width: 100%;
+}
+/* line 116, ../sass/screen.scss */
+#intro-banner .content {
+  display: inline-block;
+  padding: 4% 30px 20px 4%;
+  float: left;
+  width: 88%;
+}
+/* line 123, ../sass/screen.scss */
+#intro-banner .content div, #intro-banner .content #title-mark {
+  float: left;
+}
+/* line 127, ../sass/screen.scss */
+#intro-banner #filler {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  /* line 108, ../sass/screen.scss */
+  #intro-banner {
+    background: none;
+    background-image: url("../img/intro-banner-bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0px;
+  }
+  /* line 138, ../sass/screen.scss */
+  #intro-banner #title-mark {
+    max-width: 60%;
+  }
+  /* line 140, ../sass/screen.scss */
+  #intro-banner .content {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    float: right;
+    padding-right: 0px;
+  }
+  /* line 148, ../sass/screen.scss */
+  #intro-banner .content div, #intro-banner .content #title-mark {
+    float: right;
+  }
+  /* line 150, ../sass/screen.scss */
+  #intro-banner #filler {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 700px) {
+  /* line 154, ../sass/screen.scss */
+  #intro-banner .content {
+    top: 90px;
+    right: 40px;
+  }
+}
+@media screen and (min-width: 960px) {
+  /* line 161, ../sass/screen.scss */
+  #intro-banner .content {
+    top: 180px;
+  }
+  /* line 165, ../sass/screen.scss */
+  #intro-banner #title-mark {
+    max-width: 90%;
+  }
+}

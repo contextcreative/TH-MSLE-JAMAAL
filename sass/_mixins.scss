@@ -1,0 +1,110 @@
+//	Mixins and Functions
+//	Table of Contents
+//		1. Multipurpose Functions
+//			1.1 Calculating ems - em();
+//		2. Mixins
+//			2.1	Simple Grid Calculator
+//			2.2 UBER Grid Calculator
+
+//	==================================================
+//	1. FUNCTIONS
+//	==================================================
+
+//	1.1 Calculating ems
+@function em($target, $context) {
+	@return $target / $context * 1em;
+	}
+	
+//	==================================================
+//	2. MIXINS
+//	==================================================
+
+//	2.1 The UBER Grid Calculator but not as substantial as SUSY
+//	User Input: Total width, number of columns, column gutter, column padding
+//	Includes:
+//		- Functions:
+//			- Calculate individual column widths
+//		- Mixins:
+//			- Returning required values
+
+//	2.1.1 Calculate individual column widths
+@function single_column($total_width, $num_of_cols, $column_gutter, $column_padding) {
+	@return $total_width/$num_of_cols - $column_gutter * 2 - $column_padding * 2;
+	}
+
+//	2.1.2 column_span(<$span>, <$size>, <$remove_margin>, $margin
+//	Parameters:
+//		$span: the number of columns the block spans for
+//		$size: the size you are using
+//		$remove_margin: <left> <right>, removes the margin on the left or right side
+//		$margin: <top> <bottom>, adding margin to the top or bottom or both
+
+@mixin column_span ($span, $size: $one, $remove_margin: false false, $margin: 0 0) {
+	$column_width: single_column(nth($size, 1), nth($size, 2), nth($size, 3), nth($size, 4));
+	$col: percentage($column_width / nth($size, 1));
+	$gut: percentage(nth($size, 3) / nth($size, 1));
+	$pad: percentage(nth($size, 4) / nth($size, 1));
+	float: left;
+	padding: 0 $pad;
+	@if nth($remove_margin, 1) and nth($remove_margin, 2) {
+		margin: nth($margin, 1) 0 nth($margin, 2) 0;
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col + $gut);
+		}
+	@else if nth($remove_margin, 1) {
+		margin: nth($margin, 1) $gut nth($margin, 2) 0;
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col + $gut);
+		}
+	@else if nth($remove_margin, 2) {
+		margin: nth($margin, 1) 0 nth($margin, 2) $gut;
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col + $gut);
+		}
+	@else {
+		margin: nth($margin, 1) $gut nth($margin, 2);
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col);
+		}
+	}
+
+@mixin shift-column-left ($span, $size: $one) {
+	$column_width: single_column(nth($size, 1), nth($size, 2), nth($size, 3), nth($size, 4));
+	$col: percentage($column_width / nth($size, 1));
+	$gut: percentage(nth($size, 3) / nth($size, 1));
+	$pad: percentage(nth($size, 4) / nth($size, 1));
+	margin-left: (($col + $gut*2 + $pad*2) * $span + $gut*2);
+}
+
+@mixin shift-column-right ($span, $size: $one) {
+	$column_width: single_column(nth($size, 1), nth($size, 2), nth($size, 3), nth($size, 4));
+	$col: percentage($column_width / nth($size, 1));
+	$gut: percentage(nth($size, 3) / nth($size, 1));
+	$pad: percentage(nth($size, 4) / nth($size, 1));
+	margin-right: (($col + $gut*2 + $pad*2) * $span + $gut*2);
+}
+
+//	2.1.2 column_span(<$span>, <$context>, <$size>, <$remove_margin>, $margin
+//	Parameters:
+//		$span: the number of columns the block spans for
+//		$context: parent column span
+//		$size: the size you are using
+//		$remove_margin: <left> <right>, removes the margin on the left or right size
+//		$margin: <top> <bottom>, adding margin to the top or bottom or both
+
+@mixin nested ($span, $context, $size: $one, $remove_margin: false false, $margin: 0 0) {
+	$column_width: single_column(nth($size, 1), nth($size, 2), nth($size, 3), nth($size, 4));
+	$col: percentage($column_width / (nth($size, 1)/nth($size, 2)*$context));
+	$gut: percentage(nth($size, 3) / (nth($size, 1)/nth($size, 2)*$context));
+	$pad: percentage(nth($size, 4) / (nth($size, 1)/nth($size, 2)*$context));
+	float: left;
+	padding: 0 $pad;
+	@if nth($remove_margin, 1) {
+		margin: nth($margin, 1) $gut nth($margin, 2) 0;
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col + $gut);
+		}
+	@else if nth($remove_margin, 2) {
+		margin: nth($margin, 1) 0 nth($margin, 2) $gut;
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col + $gut);
+		}
+	@else {
+		margin: nth($margin, 1) $gut nth($margin, 2);
+		width: ((($col + $gut*2 + $pad*2) * ($span - 1)) + $col);
+		}
+	}

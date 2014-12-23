@@ -1,0 +1,103 @@
+//	Typography
+//		Establishing a typographic scale
+//		TABLE OF CONTENTS
+//			1. Basic Elements
+//			2. Headers
+
+//	=============================================
+//	1. BASIC ELEMENTS
+//	=============================================
+
+//	@font-face
+
+//	Define the basic body copy styles here.
+$body: 18px;
+$leading: em(22.5px, $body);
+$baseline: em(11px, $body);
+$font: 'Arial', 'Helvetica Neue', 'Helvetica', 'Sans-serif';
+
+body {
+	font: normal normal normal #{percentage($body/16px)}/#{$leading} $font;
+	color: $grey;
+	}
+
+p, blockquote, pre {
+	margin: 0 0 $baseline 0;
+	}
+
+ul {
+	padding: 0 0 0 1em;
+	margin: 0 0 $baseline 0;
+}
+
+a:link, a:visited {
+	color: $dark-green;
+}
+
+//	=============================================
+//	2. HEADERS
+//	=============================================
+
+h1, h2, h3, h4, h5, h6 { 
+	margin: 0 0 $baseline 0;
+}
+
+h1 {
+	font: normal normal bold 27px/28px $font;
+	color: $green;
+	text-transform: uppercase;
+	margin: 0px;
+}
+	
+
+.intro-h1 {
+	font: normal normal normal 18px/12px $font;
+	color: $green;
+	text-transform: uppercase;
+}
+
+h2 {
+	font: normal normal normal #{em(16px, 22px)}/#{em(16px, 22px)} $font;
+	color: $green;
+	text-transform: uppercase;
+	}
+	
+	
+//	=============================================
+//	3. SPECIAL CASES
+//	=============================================
+#intro-text {
+	color: $white;
+	font: normal 24px/29px $font;
+	margin-bottom: 15px;
+}
+
+
+// smaller type
+@media screen and (max-width: 350px){ 
+	$body: 14px;
+	$leading: em(218.5px, $body);
+
+	body {
+		font: normal 14px/18px $font; 
+	}
+
+	#intro-text {
+		font: normal 20px/25px $font;
+		margin-bottom: 10px;
+	}
+
+	h1 {
+		font: normal normal bold 23px/24px $font;
+	}
+		
+
+	.intro-h1 {
+		font: normal normal normal 14px/8px $font;
+	}
+
+	h2 {
+		font: normal normal normal #{em(12px, 18px)}/#{em(12px, 18px)} $font;
+		}
+
+}

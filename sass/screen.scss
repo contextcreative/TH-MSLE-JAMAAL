@@ -1,0 +1,171 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "base";
+
+body {
+	background-color: $body-background;
+	}
+
+#pagewrap {
+	max-width: 1000px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+header.header {
+	width: 100%;
+	margin-bottom: 0px;
+			@media screen and (min-width: 850px){
+				margin-bottom: 15px;
+			}
+
+
+	// different headers for mobile and desktop
+	.mobile {display:block;} 
+	.desktop {display: none;} 
+
+	@media screen and (min-width: 850px){
+		.mobile {display:none;} 
+		.desktop {display: block;}
+	}
+	//***//
+
+	nav {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+		color: $grey;
+		ul {
+			width: 95%;
+			padding: 0px;
+			position: absolute;
+			bottom: 0px;
+			left: 5%;
+			li {
+				display: inline-block;
+			}
+			li:first-child {
+				padding-right: 20px;
+			}
+		}
+
+		a:link, a:visited {
+			color: $grey;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+			}
+
+		a:hover {
+			color: $green;
+		}
+
+		.mobilenav {
+			background-color: $dark-green;
+			margin-bottom: 0px;
+			ul li a { color: $white;}
+		}
+
+		img.logos {
+			margin: 0 auto; //centers logos when on mobile
+			max-width: 45%; //logos shrink down a bit for mobile
+		}
+
+		div.section, div.col {
+				position: relative;
+				height: 50px;
+			}
+
+		.section.logos, .logos .col {
+				height: 110px;
+			}
+
+		#THlogo {float: left; position: absolute; bottom: 0px; left: 4%;}
+
+		#SoElogo {float: right; position: absolute; bottom: 0px; right: 4%;}
+
+		@media screen and (min-width: 850px){
+			#THlogo, #SoElogo { 
+				max-width: 100%; //logos full width
+				left: 0;
+				right: 0;
+			}
+			
+			div.section, div.col {
+				height: 125px;
+			}
+
+			ul {
+				left: 0;
+			}
+		}
+	}
+}
+
+#intro-banner  {
+	background-color: #000000; //for mobile
+	position: relative;
+
+	#title-mark {
+		max-width: 100%;
+	}
+
+	.content {
+		display: inline-block;
+		padding: 4% 30px 20px 4%;
+		float: left;
+		width: 88%;
+	}
+
+	.content div, .content #title-mark {
+		float: left;
+	}
+
+	#filler {display: none}; //gets rid of the banner height image
+
+
+	@media screen and (min-width: 600px){ //for non-mobile
+		background: none;
+		background-image: url('../img/intro-banner-bg.png');
+		background-size: 100%;
+		background-repeat: no-repeat;
+		padding: 0px;
+	
+
+		#title-mark { max-width: 60%;}
+
+		.content {
+		position: absolute; //manual positioning of inside of box
+		top: 30px;
+		right: 30px;
+		float: right;
+		padding-right: 0px;
+		}
+
+		.content div, .content #title-mark { float: right; }
+
+		#filler {display: inline-block}; //makes the banner height change to the height of the background
+	}
+
+	@media screen and (min-width: 700px){
+		.content {
+		top: 90px;
+		right: 40px;
+		}
+	}
+
+	@media screen and (min-width: 960px){
+		.content {
+		top: 180px;
+		}
+
+		#title-mark { max-width: 90%; }
+	}
+}
+
+
+
+
