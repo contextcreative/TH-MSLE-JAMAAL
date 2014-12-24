@@ -3,21 +3,30 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "base";
+@import "base"; //there are a bunch of basic styles in here.
 
 body {
 	background-color: $body-background;
+	background-image: url('../img/background_main.jpg');
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center top;
 	}
 
-#pagewrap {
+//content centers and doesn't expand past 1000px or below 320px.
+.pagewrap {
 	max-width: 1000px;
 	min-width: 320px;
 	margin: 0 auto;
 }
 
+//	=============================================
+//	HEADER
+//	=============================================
 header.header {
 	width: 100%;
 	margin-bottom: 0px;
+			//for desktop, add a little extra space between header and content
 			@media screen and (min-width: 850px){
 				margin-bottom: 15px;
 			}
@@ -31,141 +40,236 @@ header.header {
 		.mobile {display:none;} 
 		.desktop {display: block;}
 	}
-	//***//
+	//
 
+	//	==========================
+	//	INSIDE HEADER BAR
+	//	==========================
 	nav {
 		width: 100%;
 		max-width: 1000px;
 		margin: 0 auto;
 		color: $grey;
+
+		//	==========================
+		//	MENU
+		//	==========================
 		ul {
-			width: 95%;
 			padding: 0px;
+
+			//Positioning menu at bottom of the header bar so it aligns with logos
 			position: absolute;
 			bottom: 0px;
-			left: 5%;
+			//
+
+			//for mobile, add a little padding to the left
+			width: 95%;
+			left: 5%; 
+			@media screen and (min-width: 850px){
+				left: 0; //for desktop, remove padding on left
+			}
+			//
+
 			li {
 				display: inline-block;
 			}
+
+			//Make first link in menu have some padding on the right.
 			li:first-child {
 				padding-right: 20px;
 			}
 		}
 
-		a:link, a:visited {
-			color: $grey;
-			text-decoration: none;
-			font-size: 16px;
-			font-weight: bold;
+			//	==========================
+			//	MENU ITEM STYLING
+			//	==========================
+			a:link, a:visited {
+				color: $grey;
+				text-decoration: none;
+				font-size: 16px;
+				font-weight: bold;
+				}
+
+			a:hover {
+				color: $green;
 			}
+			//
 
-		a:hover {
-			color: $green;
-		}
 
+		//	====================================
+		//	MOBILE NAVIGATION ADDITIONAL STYLING
+		//	====================================
 		.mobilenav {
-			background-color: $dark-green;
-			margin-bottom: 0px;
-			ul li a { color: $white;}
+			background-color: $grey;
+			margin-bottom: 0px; //removing some left over additional margin
+			ul li a { color: $white;} //menu item styling
 		}
 
 		img.logos {
 			margin: 0 auto; //centers logos when on mobile
-			max-width: 45%; //logos shrink down a bit for mobile
+			max-width: 45%; //logos small size for mobile
 		}
 
 		div.section, div.col {
 				position: relative;
-				height: 50px;
+				height: 50px; //reduces height of menu bar for mobile
 			}
 
 		.section.logos, .logos .col {
-				height: 110px;
+				height: 110px; //reduces height of logos bar for mobile
 			}
+		//
 
+		//	==========================
+		//	LOGOS
+		//	==========================
 		#THlogo {float: left; position: absolute; bottom: 0px; left: 4%;}
 
 		#SoElogo {float: right; position: absolute; bottom: 0px; right: 4%;}
+		//
+
 
 		@media screen and (min-width: 850px){
 			#THlogo, #SoElogo { 
-				max-width: 100%; //logos full width
+				max-width: 100%; //logos full width for desktop
 				left: 0;
 				right: 0;
 			}
 			
 			div.section, div.col {
-				height: 125px;
-			}
-
-			ul {
-				left: 0;
+				height: 125px; //header bar height static at 125px tall. Needs a static inputed height so the menu will align to the bottom.
 			}
 		}
+
 	}
 }
 
+//	=============================================
+//	INTRO ENERGY ALL STAR BANNER
+//	=============================================
+
 #intro-banner  {
-	background-color: #000000; //for mobile
+	background-color: #000000; //for mobile, gives a solid background colour with no background image
 	position: relative;
+	margin-bottom: 10px;
 
-	#title-mark {
-		max-width: 100%;
-	}
-
+	//	==========================
+	//	INSIDE CONTENT
+	//	==========================
 	.content {
 		display: inline-block;
+		float: left; //For mobile, pull all the left
 		padding: 4% 30px 20px 4%;
-		float: left;
-		width: 88%;
+		width: 88%; //88%+4%+4% doesn't add up to 100%, but for some reason if I go larger, it calculates out of the div
 	}
 
-	.content div, .content #title-mark {
-		float: left;
+		//inside inside content (direct selecting elements to be safe)
+		.content div, .content #title-mark {
+			float: left; //For mobile, pull all content to the left
+		}
+
+	#title-mark {
+		max-width: 100%; //"Energy All Star - Jamaal Magloire" Mark scales to it's container's width
 	}
 
 	#filler {display: none}; //gets rid of the banner height image
 
-
-	@media screen and (min-width: 600px){ //for non-mobile
-		background: none;
-		background-image: url('../img/intro-banner-bg.png');
-		background-size: 100%;
-		background-repeat: no-repeat;
+	//	==========================
+	//	DESKTOP VIEW
+	//	==========================
+	@media screen and (min-width: 600px){
+		background: none; //removes the solid black bg
+		background-image: url('../img/intro-banner-bg.png'); //adds bg image
+		background-size: 100%; //To include the marker-drawn border, background needs to always be 100% in-view
+		background-repeat: no-repeat; //self-explanatory
 		padding: 0px;
 	
-
+		//Reduces "Energy All Star - Jamaal Magloire" Mark scaling, as the box is much bigger (leaves space on the left for Jamaal's face)
 		#title-mark { max-width: 60%;}
 
+		//manual positioning of inside content of box
 		.content {
-		position: absolute; //manual positioning of inside of box
+		position: absolute; 
 		top: 30px;
 		right: 30px;
-		float: right;
+		float: right; //pulls content to right
 		padding-right: 0px;
 		}
+			//inside inside content (direct selecting elements to be safe)
+			.content div, .content #title-mark { float: right; } //pulls content to right
 
-		.content div, .content #title-mark { float: right; }
-
-		#filler {display: inline-block}; //makes the banner height change to the height of the background
+		#filler {display: inline-block}; //makes the banner height change to the height of the background, by placing an invsible header image replicating the background
 	}
 
-	@media screen and (min-width: 700px){
-		.content {
-		top: 90px;
-		right: 40px;
-		}
-	}
-
-	@media screen and (min-width: 960px){
-		.content {
-		top: 180px;
+		//	==================================================
+		//	ADDITIONAL SIZES FOR POSITIONING OF INSIDE CONTENT
+		//	==================================================
+		@media screen and (min-width: 700px){
+			.content {
+			top: 90px;
+			right: 40px;
+			}
 		}
 
-		#title-mark { max-width: 90%; }
-	}
+		@media screen and (min-width: 960px){
+			.content {
+			top: 130px;
+			}
+
+			#title-mark { max-width: 90%; }
+		}
 }
 
 
+//	=============================================
+//	CONTENT
+//	=============================================
+		//	==================================================
+		//	ORANGE HEADERS
+		//	==================================================
+		.orange-header {
+			background-image: url('../img/orange-header-bg.png');
+			background-repeat: no-repeat;
+			background-position: center bottom;
 
+			.col {margin: 0;}
+
+			.pagewrap {position: relative; display: block;}
+
+			h2 {position:absolute; bottom: 10px; left: 90px;}
+
+			img {
+				float: left;
+				width: auto;
+			}
+		}
+
+		#save-at-home {
+			height: 88px;
+			.pagewrap {height: 88px;}
+		}
+
+		#save-at-work {
+			height: 108px;
+			.pagewrap {height: 108px;}
+		}
+
+		//	==================================================
+		//	VIDEOS
+		//	==================================================
+
+		.videos {
+			padding: 0px 10px 0px 10px;
+
+			img {
+				width: 100%;
+				height: auto;
+				margin-bottom:15px;
+			}
+
+			.col {
+				margin-bottom: 20px;
+			}
+
+}
 

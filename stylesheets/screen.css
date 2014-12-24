@@ -175,19 +175,19 @@
 }
 /* line 19, ../sass/_typography.scss */
 body {
-  font: normal normal normal 112.5%/1.25em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
-  color: #7d7d7d;
+  font: normal normal normal 14px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #363636;
 }
 
 /* line 24, ../sass/_typography.scss */
 p, blockquote, pre {
-  margin: 0 0 0.61111em 0;
+  margin: 0 0 11px 0;
 }
 
 /* line 28, ../sass/_typography.scss */
 ul {
   padding: 0 0 0 1em;
-  margin: 0 0 0.61111em 0;
+  margin: 0 0 11px 0;
 }
 
 /* line 33, ../sass/_typography.scss */
@@ -197,7 +197,7 @@ a:link, a:visited {
 
 /* line 41, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.61111em 0;
+  margin: 0 0 0 0;
 }
 
 /* line 45, ../sass/_typography.scss */
@@ -217,12 +217,26 @@ h1 {
 
 /* line 59, ../sass/_typography.scss */
 h2 {
-  font: normal normal normal 0.72727em/0.72727em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
-  color: #8dc63f;
+  font: normal normal bold 21px/22px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #000000;
   text-transform: uppercase;
+  margin: 0px;
 }
 
-/* line 69, ../sass/_typography.scss */
+/* line 66, ../sass/_typography.scss */
+h3 {
+  font: normal normal bold 24px/22px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #8dc63f;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* line 73, ../sass/_typography.scss */
+.small-h3 {
+  font: normal normal normal 16px/22px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+}
+
+/* line 81, ../sass/_typography.scss */
 #intro-text {
   color: #ffffff;
   font: normal 24px/29px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
@@ -230,30 +244,30 @@ h2 {
 }
 
 @media screen and (max-width: 350px) {
-  /* line 81, ../sass/_typography.scss */
+  /* line 93, ../sass/_typography.scss */
   body {
     font: normal 14px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 
-  /* line 85, ../sass/_typography.scss */
+  /* line 97, ../sass/_typography.scss */
   #intro-text {
     font: normal 20px/25px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
     margin-bottom: 10px;
   }
 
-  /* line 90, ../sass/_typography.scss */
+  /* line 102, ../sass/_typography.scss */
   h1 {
     font: normal normal bold 23px/24px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 
-  /* line 95, ../sass/_typography.scss */
+  /* line 107, ../sass/_typography.scss */
   .intro-h1 {
     font: normal normal normal 14px/8px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 
-  /* line 99, ../sass/_typography.scss */
+  /* line 111, ../sass/_typography.scss */
   h2 {
-    font: normal normal normal 0.66667em/0.66667em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+    font: normal normal bold 17px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 }
 /* line 45, ../sass/_base.scss */
@@ -264,110 +278,120 @@ img {
 
 /* line 8, ../sass/screen.scss */
 body {
-  background-color: #ffffff;
+  background-color: #ececee;
+  background-image: url("../img/background_main.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center top;
 }
 
-/* line 12, ../sass/screen.scss */
-#pagewrap {
+/* line 17, ../sass/screen.scss */
+.pagewrap {
   max-width: 1000px;
   min-width: 320px;
   margin: 0 auto;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 header.header {
   width: 100%;
   margin-bottom: 0px;
 }
 @media screen and (min-width: 850px) {
-  /* line 18, ../sass/screen.scss */
+  /* line 26, ../sass/screen.scss */
   header.header {
     margin-bottom: 15px;
   }
 }
-/* line 27, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 header.header .mobile {
   display: block;
 }
-/* line 28, ../sass/screen.scss */
+/* line 37, ../sass/screen.scss */
 header.header .desktop {
   display: none;
 }
 @media screen and (min-width: 850px) {
-  /* line 31, ../sass/screen.scss */
+  /* line 40, ../sass/screen.scss */
   header.header .mobile {
     display: none;
   }
-  /* line 32, ../sass/screen.scss */
+  /* line 41, ../sass/screen.scss */
   header.header .desktop {
     display: block;
   }
 }
-/* line 36, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 header.header nav {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   color: #7d7d7d;
 }
-/* line 41, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 header.header nav ul {
-  width: 95%;
   padding: 0px;
   position: absolute;
   bottom: 0px;
+  width: 95%;
   left: 5%;
 }
-/* line 47, ../sass/screen.scss */
+@media screen and (min-width: 850px) {
+  /* line 57, ../sass/screen.scss */
+  header.header nav ul {
+    left: 0;
+  }
+}
+/* line 73, ../sass/screen.scss */
 header.header nav ul li {
   display: inline-block;
 }
-/* line 50, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 header.header nav ul li:first-child {
   padding-right: 20px;
 }
-/* line 55, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 header.header nav a:link, header.header nav a:visited {
   color: #7d7d7d;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 62, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 header.header nav a:hover {
   color: #8dc63f;
 }
-/* line 66, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 header.header nav .mobilenav {
-  background-color: #00703c;
+  background-color: #7d7d7d;
   margin-bottom: 0px;
 }
-/* line 69, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 header.header nav .mobilenav ul li a {
   color: #ffffff;
 }
-/* line 72, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 header.header nav img.logos {
   margin: 0 auto;
   max-width: 45%;
 }
-/* line 77, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 header.header nav div.section, header.header nav div.col {
   position: relative;
   height: 50px;
 }
-/* line 82, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 header.header nav .section.logos, header.header nav .logos .col {
   height: 110px;
 }
-/* line 86, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 header.header nav #THlogo {
   float: left;
   position: absolute;
   bottom: 0px;
   left: 4%;
 }
-/* line 88, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 header.header nav #SoElogo {
   float: right;
   position: absolute;
@@ -375,48 +399,45 @@ header.header nav #SoElogo {
   right: 4%;
 }
 @media screen and (min-width: 850px) {
-  /* line 91, ../sass/screen.scss */
+  /* line 133, ../sass/screen.scss */
   header.header nav #THlogo, header.header nav #SoElogo {
     max-width: 100%;
     left: 0;
     right: 0;
   }
-  /* line 97, ../sass/screen.scss */
+  /* line 139, ../sass/screen.scss */
   header.header nav div.section, header.header nav div.col {
     height: 125px;
   }
-  /* line 101, ../sass/screen.scss */
-  header.header nav ul {
-    left: 0;
-  }
 }
 
-/* line 108, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 #intro-banner {
   background-color: #000000;
   position: relative;
+  margin-bottom: 10px;
 }
-/* line 112, ../sass/screen.scss */
-#intro-banner #title-mark {
-  max-width: 100%;
-}
-/* line 116, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 #intro-banner .content {
   display: inline-block;
-  padding: 4% 30px 20px 4%;
   float: left;
+  padding: 4% 30px 20px 4%;
   width: 88%;
 }
-/* line 123, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 #intro-banner .content div, #intro-banner .content #title-mark {
   float: left;
 }
-/* line 127, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
+#intro-banner #title-mark {
+  max-width: 100%;
+}
+/* line 175, ../sass/screen.scss */
 #intro-banner #filler {
   display: none;
 }
 @media screen and (min-width: 600px) {
-  /* line 108, ../sass/screen.scss */
+  /* line 151, ../sass/screen.scss */
   #intro-banner {
     background: none;
     background-image: url("../img/intro-banner-bg.png");
@@ -424,11 +445,11 @@ header.header nav #SoElogo {
     background-repeat: no-repeat;
     padding: 0px;
   }
-  /* line 138, ../sass/screen.scss */
+  /* line 188, ../sass/screen.scss */
   #intro-banner #title-mark {
     max-width: 60%;
   }
-  /* line 140, ../sass/screen.scss */
+  /* line 191, ../sass/screen.scss */
   #intro-banner .content {
     position: absolute;
     top: 30px;
@@ -436,29 +457,89 @@ header.header nav #SoElogo {
     float: right;
     padding-right: 0px;
   }
-  /* line 148, ../sass/screen.scss */
+  /* line 199, ../sass/screen.scss */
   #intro-banner .content div, #intro-banner .content #title-mark {
     float: right;
   }
-  /* line 150, ../sass/screen.scss */
+  /* line 201, ../sass/screen.scss */
   #intro-banner #filler {
     display: inline-block;
   }
 }
 @media screen and (min-width: 700px) {
-  /* line 154, ../sass/screen.scss */
+  /* line 208, ../sass/screen.scss */
   #intro-banner .content {
     top: 90px;
     right: 40px;
   }
 }
 @media screen and (min-width: 960px) {
-  /* line 161, ../sass/screen.scss */
+  /* line 215, ../sass/screen.scss */
   #intro-banner .content {
-    top: 180px;
+    top: 130px;
   }
-  /* line 165, ../sass/screen.scss */
+  /* line 219, ../sass/screen.scss */
   #intro-banner #title-mark {
     max-width: 90%;
   }
+}
+
+/* line 230, ../sass/screen.scss */
+.orange-header {
+  background-image: url("../img/orange-header-bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+/* line 235, ../sass/screen.scss */
+.orange-header .col {
+  margin: 0;
+}
+/* line 237, ../sass/screen.scss */
+.orange-header .pagewrap {
+  position: relative;
+  display: block;
+}
+/* line 239, ../sass/screen.scss */
+.orange-header h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 90px;
+}
+/* line 241, ../sass/screen.scss */
+.orange-header img {
+  float: left;
+  width: auto;
+}
+
+/* line 247, ../sass/screen.scss */
+#save-at-home {
+  height: 88px;
+}
+/* line 249, ../sass/screen.scss */
+#save-at-home .pagewrap {
+  height: 88px;
+}
+
+/* line 252, ../sass/screen.scss */
+#save-at-work {
+  height: 108px;
+}
+/* line 254, ../sass/screen.scss */
+#save-at-work .pagewrap {
+  height: 108px;
+}
+
+/* line 261, ../sass/screen.scss */
+.videos {
+  padding: 0px 10px 0px 10px;
+}
+/* line 264, ../sass/screen.scss */
+.videos img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+/* line 270, ../sass/screen.scss */
+.videos .col {
+  margin-bottom: 20px;
 }

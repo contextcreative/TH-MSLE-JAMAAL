@@ -175,19 +175,19 @@
 }
 /* line 19, ../sass/_typography.scss */
 body {
-  font: normal normal normal 112.5%/1.25em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  font: normal normal normal 18px/22.5px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   color: #7d7d7d;
 }
 
 /* line 24, ../sass/_typography.scss */
 p, blockquote, pre {
-  margin: 0 0 0.61111em 0;
+  margin: 0 0 11px 0;
 }
 
 /* line 28, ../sass/_typography.scss */
 ul {
   padding: 0 0 0 1em;
-  margin: 0 0 0.61111em 0;
+  margin: 0 0 11px 0;
 }
 
 /* line 33, ../sass/_typography.scss */
@@ -197,7 +197,7 @@ a:link, a:visited {
 
 /* line 41, ../sass/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 0.61111em 0;
+  margin: 0 0 0 0;
 }
 
 /* line 45, ../sass/_typography.scss */
@@ -217,12 +217,20 @@ h1 {
 
 /* line 59, ../sass/_typography.scss */
 h2 {
-  font: normal normal normal 0.72727em/0.72727em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  font: normal normal bold 21px/22px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+/* line 66, ../sass/_typography.scss */
+h3 {
+  font: normal normal normal 16px/22px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   color: #8dc63f;
   text-transform: uppercase;
 }
 
-/* line 69, ../sass/_typography.scss */
+/* line 76, ../sass/_typography.scss */
 #intro-text {
   color: #ffffff;
   font: normal 24px/29px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
@@ -230,30 +238,35 @@ h2 {
 }
 
 @media screen and (max-width: 350px) {
-  /* line 81, ../sass/_typography.scss */
+  /* line 88, ../sass/_typography.scss */
   body {
     font: normal 14px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 
-  /* line 85, ../sass/_typography.scss */
+  /* line 92, ../sass/_typography.scss */
   #intro-text {
     font: normal 20px/25px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
     margin-bottom: 10px;
   }
 
-  /* line 90, ../sass/_typography.scss */
+  /* line 97, ../sass/_typography.scss */
   h1 {
     font: normal normal bold 23px/24px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 
-  /* line 95, ../sass/_typography.scss */
+  /* line 102, ../sass/_typography.scss */
   .intro-h1 {
     font: normal normal normal 14px/8px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 
-  /* line 99, ../sass/_typography.scss */
+  /* line 106, ../sass/_typography.scss */
   h2 {
-    font: normal normal normal 0.66667em/0.66667em "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+    font: normal normal bold 17px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
+  }
+
+  /* line 110, ../sass/_typography.scss */
+  h3 {
+    font: normal normal normal 12px/18px "Arial", "Helvetica Neue", "Helvetica", "Sans-serif";
   }
 }
 /* line 45, ../sass/_base.scss */

@@ -20,11 +20,13 @@
 	</head>
 	
 	<body>
-		<div id="pagewrap">
+		<div class="pagewrap">
 
 			<!--row-->
 			<header class="header section group">
-				<!-- desktop version of header-->
+				<!-- ============================
+					 DESKTOP VERSION OF HEADER
+				================================= -->
 				<nav class="desktop">
 					<!--4/12 column
 						TORONTO HYDRO LOGO
@@ -51,14 +53,16 @@
 						SAVE ON ENERGY LOGO
 					-->
 					<div class="col span_4_of_12">
-						<a href="https://www.saveonenergy.ca/"><img id="SoElogo" class="logos" src="img/soe_logo.png" alt="Save on Energy"></a>
+						<a href="https://www.saveonenergy.ca/"><img id="SoElogo" class="logos" src="img/soe_logo.svg" alt="Save on Energy logo" onerror="this.onerror=null;this.src='img/soe_logo.png'"></a>
 					</div>
 					<!-- -->
 
 				</nav>
 				<!-- -->
 
-				<!-- mobile version of header-->
+				<!-- ============================
+					 MOBILE VERSION OF HEADER
+				================================= -->
 				<nav class="mobile">
 					<!--row-->
 					<div class="section group logos">
@@ -67,7 +71,7 @@
 						-->
 						<div class="col span_12_of_12">
 							<a href="http://www.torontohydro.com"><img id="THlogo" class="logos" src="img/th_logo.svg" alt="Toronto Hydro logo" onerror="this.onerror=null;this.src='img/th_logo.png'"></a>
-							<a href="https://www.saveonenergy.ca/"><img id="SoElogo" class="logos" src="img/soe_logo.png" alt="Save on Energy"></a>
+							<a href="https://www.saveonenergy.ca/"><img id="SoElogo" class="logos" src="img/soe_logo.svg" alt="Save on Energy logo" onerror="this.onerror=null;this.src='img/soe_logo.png'"></a>
 						</div>
 						<!-- -->
 					</div>
